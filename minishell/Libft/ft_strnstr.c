@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imraoui <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:11:42 by imraoui           #+#    #+#             */
-/*   Updated: 2022/05/17 15:34:31 by imraoui          ###   ########.fr       */
+/*   Updated: 2023/01/27 23:38:59 by imraoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-static int	ft_check(const char *str, const char *find, size_t t)
+# include "libft.h"
+static int	ft_check(char *str, char *find, size_t t)
 {
 	size_t	a;
 
@@ -25,7 +25,7 @@ static int	ft_check(const char *str, const char *find, size_t t)
 	return (1);
 }
 
-char	*ft_strnstr(const char *str, const char *find, size_t len)
+char	*ft_strnstr(char *str, char *find, size_t len)
 {
 	size_t	t;
 	size_t	findsize;

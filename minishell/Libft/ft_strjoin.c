@@ -3,15 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imraoui <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 18:35:14 by imraoui           #+#    #+#             */
-/*   Updated: 2022/05/13 11:04:22 by imraoui          ###   ########.fr       */
+/*   Updated: 2023/01/27 23:45:21 by imraoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	free_join(char **str)
+{
+	if (str && *str)
+	{
+		free(*str);
+		*str = NULL;
+	}
+}
+char	*ft_strjoin(char *s1, char *s2)
 {
 	size_t	len;
 	size_t	i;
@@ -33,5 +42,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i++;
 	}
 	str[i] = '\0';
+	free_join(&s1);
 	return (str);
 }

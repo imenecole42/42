@@ -21,8 +21,14 @@ MAGENTA = \033[0;35m
 CYAN = \033[0;36m
 NC = \033[0m
 
-SRCS =	main.c\
-		create_env.c\
+SRCS =	main.c \
+		create_env.c \
+		create_export.c \
+		echo.c \
+		export.c \
+		ft_free.c \
+		util_export.c \
+		util_print_export.c \
 
 
 LIBFT := Libft/libft.a
