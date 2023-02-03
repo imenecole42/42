@@ -52,7 +52,7 @@ char	*ft_select2(char *str)
 	if (!str[i])
 		return (NULL);
 	if (str[i] == '\n')
-		dest = (char *)malloc(sizeof(char) * (ft_strlen1(str) - i + 1));
+		dest = (char *)malloc(sizeof(char) * (ft_strlen(str) - i + 1));
 	if (!dest)
 		return (NULL);
 	i++;
@@ -73,14 +73,14 @@ char	*get_read_line(int fd, char *str)
 	int			res;
 
 	res = 1;
-	while (res > 0 && (!str || !ft_strchr1(str, '\n')))
+	while (res > 0 && (!str || !ft_strchr(str, '\n')))
 	{
 		res = read(fd, buff, BUFFER_SIZE);
 		if (res == -1)
 			return (NULL);
 		buff[res] = '\0';
 		temp = str;
-		str = ft_strjoin1(temp, buff);
+		str = ft_strjoin(temp, buff);
 	}
 	return (str);
 }
@@ -109,58 +109,3 @@ char	*get_next_line(int fd)
 	str = temp;
 	return (ligne);
 }
-/*
-int main()
-{
-	int fd;
-	fd = open("coucou",O_RDONLY);
-	char *ligne;
-	ligne = NULL;
-	while(1)
-	{
-		ligne = get_next_line(fd);
-		if (!ligne)
-			break ;
-		if (ligne != NULL)
-			printf("%s",ligne);
-		free(ligne);
-	}
-	return (0);
-}
-*/
-/*
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-void	ft_putstr_fd(char *s, int fd)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		i++;
-    }
-}
-void	ft_putendl_fd(char *s, int fd)
-{
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
-}
-
-int			main(int ac, char **av)
-{
-	int		fd;
-	char	*line;
-
-	line = NULL;
-	fd = open(av[ac-1], O_RDONLY);
-	while (get_next_line(fd))
-	{
-		ft_putendl_fd(line,fd);
-	}
-	close(fd);
-}
-*/

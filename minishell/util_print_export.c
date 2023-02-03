@@ -10,13 +10,13 @@ char *ft_get_add_export(t_data *mini, char *str)
 		i++;
 	if (mini->export[i] == 0)
 	{
-		if (!(is_plus(str) && ft_select1(str)) || (is_plus(str) && ft_select1(str)))
+		if (!(is_plus(str)))
 		{
 			temp = ft_strdup(str);
 			mini->export[i] = temp;
 			printf("\n333\n");
 		}
-		else if ((is_plus(str) && !ft_select1(str)) || (is_plus(str) && ft_select1(str)))
+		else if ((is_plus(str)))
 		{
 			temp = strdup_plus(str);
 			mini->export[i] = temp;
@@ -42,7 +42,7 @@ void realloc_export_be(t_data *mini, char *str)
 		temp=ft_strjoin(export,val);
 		mini->export[i]=temp;
 		printf("\n1111\n");
-		printf("%s",mini->export[i]);
+		//printf("%s",mini->export[i]);
 	}
 	else if (!is_plus(str) && val)
 	{
@@ -50,7 +50,7 @@ void realloc_export_be(t_data *mini, char *str)
 		temp = ft_strdup(str);
 		mini->export[i] = temp;
 		printf("\n2222\n");
-		printf("%s",mini->export[i]);
+		//printf("%s",mini->export[i]);
 	}
 	return ;
 }

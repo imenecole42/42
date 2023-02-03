@@ -3,13 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: imraoui <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/12 11:03:12 by imraoui           #+#    #+#              #
-#    Updated: 2022/05/24 17:14:17 by imraoui          ###   ########.fr        #
+#    Updated: 2023/02/02 17:25:49 by imraoui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-SRCS		=	ft_atoi.c \
+
+SRCS=			ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
 				ft_isalnum.c \
@@ -46,6 +47,7 @@ SRCS		=	ft_atoi.c \
 				print.c \
 				get_next_line.c \
 				get_next_line_utils.c \
+				ft_add_libft.c \
 
 OBJS		=	${SRCS:.c=.o}
 

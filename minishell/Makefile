@@ -29,6 +29,9 @@ SRCS =	main.c \
 		ft_free.c \
 		util_export.c \
 		util_print_export.c \
+		unset.c \
+		ft_pwd.c \
+		ft_cd.c   \
 
 
 LIBFT := Libft/libft.a

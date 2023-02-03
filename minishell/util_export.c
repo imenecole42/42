@@ -42,8 +42,7 @@ char *strdup_plus(char *str)
     dest[i]=0;
     return(dest);
 }
-/*
-char *ft_select(char *str)
+char *ft_select2(char *str)
 {
     char    *dest;
     int        i;
@@ -53,29 +52,19 @@ char *ft_select(char *str)
     j = 0;
     while (str && str[i] && str[i] != '=')
         i++;
-    if (str[i] == '=')
-        dest = (char *) malloc(sizeof(char) * (i + 2));
-    else if (str[i] == '\0')
-        dest = (char *) malloc(sizeof(char) *(i + 1));
+    dest = (char *) malloc(sizeof(char) *(i + 1));
     if (!dest)
         return (NULL);
-    while (str[j] && str[j] != '=' && str[j]!='+')
+    i = 0;
+    while (str[i] && str[i]!='+' && str[i] != '=')
     {
-        dest[j] = str[j];
+        dest[j] = str[i];
         j++;
+        i++;
     }
-     if(str[j]=='+')
-     {
-        dest[j] = '\0';
-     }
-    else if (str[j] == '=')
-    {
-        dest[j++] = '=';
-        dest[j] = '\0';
-    }
+    dest[j]='\0';
     return (dest);
 }
-*/
 char *ft_select(char *str)
 {
     char    *dest;
@@ -98,7 +87,7 @@ char *ft_select(char *str)
         j++;
     }
     
-    if(str[j]=='+')
+    if(str[j]=='+' && str[j+1]=='=')
     {
       dest[j++]='=';
       dest[j--]='\0';
@@ -108,6 +97,8 @@ char *ft_select(char *str)
         dest[j++] = '=';
         dest[j] = '\0';
     }
+    else
+      dest[j]='\0';
     return (dest);
 }
 

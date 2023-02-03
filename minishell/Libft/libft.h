@@ -6,7 +6,7 @@
 /*   By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 11:00:50 by imraoui           #+#    #+#             */
-/*   Updated: 2023/01/27 23:37:24 by imraoui          ###   ########.fr       */
+/*   Updated: 2023/02/02 17:46:45 by imraoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 void	ft_putchar(char c );
 void	ft_putstr(char *str);
-
+char	*ft_strcpy(char *dest, char *src);
+int		ft_strcmp(char *s1, char *s2);
+int		ft_strlen_mat(char **tab);
+char	*ft_strjoinn(char *s1, char *s2);//sans free
 #endif
