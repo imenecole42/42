@@ -32,6 +32,7 @@ SRCS =	main.c \
 		unset.c \
 		ft_pwd.c \
 		ft_cd.c   \
+		ft_expo.c \
 
 
 LIBFT := Libft/libft.a

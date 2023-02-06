@@ -6,7 +6,7 @@
 /*   By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 10:51:07 by hferjani          #+#    #+#             */
-/*   Updated: 2023/02/03 16:21:11 by imraoui          ###   ########.fr       */
+/*   Updated: 2023/02/06 17:31:09 by imraoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,9 @@ void	ft_many_arg(t_data *mini);
 void	ft_exit(t_data *mini, char **cmd);
 int	is_builtin(t_data *mini, char **argv);
 int	builtin_env(char **argv);
+void 	util_unset(t_data *mini,int i,int j,char **temp);
+char *get_var_echo(char *str);
+char *get_val_echo(char *str);
+char *check_var(char *str,t_data *mini);
+int ft_print_var_double(char *str,t_data *mini);
 #endif

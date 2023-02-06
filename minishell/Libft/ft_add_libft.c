@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_add_libft.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imraoui <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 12:16:41 by imraoui           #+#    #+#             */
-/*   Updated: 2023/02/03 12:18:46 by imraoui          ###   ########.fr       */
+/*   Updated: 2023/02/06 17:29:53 by imraoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,11 @@ int	ft_strlen_mat(char **tab)
 		y++;
 	}
 	return (y);
+}
+
+int    ft_isalnum_mini(int c)
+{
+    if (ft_isalpha(c) || ft_isdigit(c) || c =='_')
+        return (1);
+    return (0);
 }

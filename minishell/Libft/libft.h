@@ -6,7 +6,7 @@
 /*   By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 11:00:50 by imraoui           #+#    #+#             */
-/*   Updated: 2023/02/02 17:46:45 by imraoui          ###   ########.fr       */
+/*   Updated: 2023/02/06 17:27:00 by imraoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,5 @@ char	*ft_strcpy(char *dest, char *src);
 int		ft_strcmp(char *s1, char *s2);
 int		ft_strlen_mat(char **tab);
 char	*ft_strjoinn(char *s1, char *s2);//sans free
+int    ft_isalnum_mini(int c);
 #endif

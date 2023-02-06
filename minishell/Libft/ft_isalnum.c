@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imraoui <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 11:28:09 by imraoui           #+#    #+#             */
-/*   Updated: 2022/05/13 08:19:17 by imraoui          ###   ########.fr       */
+/*   Updated: 2023/02/06 17:28:10 by imraoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
+#include "libft.h"
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
+	if (ft_isalpha(c) || ft_isdigit(c) )
 		return (1);
 	return (0);
 }
