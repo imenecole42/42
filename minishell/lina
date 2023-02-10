@@ -12,6 +12,7 @@ ft_free.c
 ft_is_bullting.c
 ft_pwd.c
 Libft
+lina
 main.c
 Makefile
 minishell

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+        */
+/*   By: imraoui <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:28:33 by imraoui           #+#    #+#             */
-/*   Updated: 2023/02/03 17:56:35 by imraoui          ###   ########.fr       */
+/*   Updated: 2022/12/20 15:58:23 by imraoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,5 @@ int	main(int argc, char *argv[], char *envp[])
 	ft_close(&pipex);
 	waitpid(pipex.pid1, NULL, 0);
 	waitpid(pipex.pid2, NULL, 0);
- 	return (0);
+	return (0);
 }

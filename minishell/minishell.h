@@ -6,7 +6,7 @@
 /*   By: imraoui <imraoui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 10:51:07 by hferjani          #+#    #+#             */
-/*   Updated: 2023/02/06 17:31:09 by imraoui          ###   ########.fr       */
+/*   Updated: 2023/02/10 15:32:37 by imraoui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,10 @@ void 	util_unset(t_data *mini,int i,int j,char **temp);
 char *get_var_echo(char *str);
 char *get_val_echo(char *str);
 char *check_var(char *str,t_data *mini);
-int ft_print_var_double(char *str,t_data *mini);
+char *get_val_echo_space(char *str);
+int ft_print_var_quote(char *str,t_data *mini);
+int ft_print_var_sans_quote(char *str,t_data *mini);
+/*part execution*/
+char	**ft_get_path(char  **env);
+char	*get_cmd(char *cmd, char **envp);
 #endif

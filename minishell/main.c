@@ -3,9 +3,13 @@
 
 int main(int argc,char **argv,char **env)
 {
+	//(void)argv;
 	(void)argc;
-	(void)argv;
-	int i=0;
+  	get_cmd(argv[1],env);
+	/*
+	(void)argc;
+	//(void)argv;
+	//int i=0;
 	//int j=0;
 	t_data mini;
 	
@@ -54,11 +58,12 @@ int main(int argc,char **argv,char **env)
 	//ft_free(mini.env);
 	//printf("%s\n",get_var_echo(argv[2]));
 	//printf("%s\n",get_val_echo(argv[2]));
-	printf("%s\n",ft_select(mini.env[1]));
-	ft_select2(mini.env[i])
-	while ((argv[2]) && ft_strcmp(get_var_echo(argv[2]), ft_select2(mini.env[i])))
-			i++;
-	printf("%s\n",ft_select1(mini.env[1]));
+	//printf("%s\n",ft_select2(mini.env[34]));
+	//ft_select2(mini.env[1]);
+	ft_print_var_sans_quote(argv[2],&mini);
+	printf("avec quote\n\n\n");
+	ft_print_var_quote(argv[2],&mini);
+	//printf("%s",check_var(argv[2],&mini));*/
 	return(0);
 }
 
